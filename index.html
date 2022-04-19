@@ -11,44 +11,22 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
-	<script src="assets/js/geolocation-5.js" defer></script>
+	<script src="assets/js/map.js" defer></script>
+	<script src="https://kit.fontawesome.com/8fcbdea60a.js" crossorigin="anonymous"></script>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
 </head>
 
 <body>
 	<div id="wrapper">
-		<header>
-			<div class="container flexbox">
-				<div class="title">
-					<h1>Geolocation</h1>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="#" target="_blank">Shop</a></li>
-						<li><a href="#" target="_blank">Contact</a></li>
-						<li><a href="#" target="_blank">About us</a></li>
-						<li><a href="#" target="_blank">My account</a></li>
-					</ul>
-				</nav>
-				<div class="mobile-nav">
-					<p><i class="fas fa-bars" title="Menu"></i></p>
-				</div>
+		<main>
+			<div class="loading-screen">
+				<div class="loader"></div>
 			</div>
-		</header>
-		<main>			
-			<div class="container">
-				<button>Show my location</button>
+			<div id="map"></div>
+			<div class="dot">
+				<div class="pulse-dot"></div>
 			</div>
-			<noscript>
-				<p>This page requires a JavaScript-enabled browser.</p>
-			</noscript>
 		</main>
-		<footer>
-			<div class="container">
-				<div class="copyright">
-					<p>&copy 2021 Super Website</p>
-				</div>
-			</div>
-		</footer>
 	</div>
 </body>
 
