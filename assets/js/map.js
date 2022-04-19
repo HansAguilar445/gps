@@ -28,13 +28,12 @@ function errorHandler() {
 	throw new Error('Unable to obtain user location');
 }
 
-window.onload = () => {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showLocation, errorHandler, { enableHighAccuracy: true });
-	} else {
-		console.log('Geolocation is not supported by your browser.');
-	}
+if (navigator.geolocation) {
+	navigator.geolocation.getCurrentPosition(showLocation, errorHandler, { enableHighAccuracy: true });
+} else {
+	console.log('Geolocation is not supported by your browser.');
 }
+
 
 
 
