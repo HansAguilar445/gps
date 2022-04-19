@@ -10,7 +10,7 @@ const map = new mapboxgl.Map({
 	antialias: true,
 	center: [0, 0], // starting position [lng, lat]
 	pitch: 40,
-	zoom: 16 // starting zoom
+	zoom: 17 // starting zoom
 });
 
 //The 'success' callback function
@@ -36,6 +36,11 @@ window.onload = () => {
 	}
 }
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-
-
+// We listen to the resize event
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
